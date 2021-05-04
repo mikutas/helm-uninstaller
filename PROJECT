@@ -3,4 +3,14 @@ layout:
 - go.kubebuilder.io/v3
 projectName: helm-uninstaller
 repo: github.com/mikutas/helm-uninstaller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: mikutas
+  kind: HelmUninstaller
+  path: github.com/mikutas/helm-uninstaller/api/v1alpha1
+  version: v1alpha1
 version: "3"

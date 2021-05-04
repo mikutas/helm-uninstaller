@@ -1,0 +1,24 @@
+# permissions for end users to edit helmuninstallers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: helmuninstaller-editor-role
+rules:
+- apiGroups:
+  - mikutas.example.com
+  resources:
+  - helmuninstallers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - mikutas.example.com
+  resources:
+  - helmuninstallers/status
+  verbs:
+  - get
