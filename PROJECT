@@ -1,0 +1,6 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+projectName: helm-uninstaller
+repo: github.com/mikutas/helm-uninstaller
+version: "3"
